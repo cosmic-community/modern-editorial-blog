@@ -38,3 +38,39 @@ export interface Post extends CosmicObject {
     category: Category;
   };
 }
+
+export interface Stroke extends CosmicObject {
+  type: 'strokes';
+  metadata: {
+    icon: {
+      url: string;
+      imgix_url: string;
+    };
+    description: string;
+  };
+}
+
+export interface Event extends CosmicObject {
+  type: 'events';
+  metadata: {
+    distance_range: string;
+    description: string;
+  };
+}
+
+export interface Stretch extends CosmicObject {
+  type: 'stretches';
+  metadata: {
+    video_guide?: {
+      url: string;
+    };
+    animation?: {
+      url: string;
+      imgix_url: string;
+    };
+    instructions: string;
+    duration_seconds: number;
+    target_strokes?: Stroke[];
+    target_events?: Event[];
+  };
+}

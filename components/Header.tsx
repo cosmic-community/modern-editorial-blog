@@ -1,13 +1,13 @@
 import Link from 'next/link';
-import { BookOpen } from 'lucide-react';
+import { Waves } from 'lucide-react';
 
 export default function Header() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background/80 backdrop-blur-md">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 font-serif text-xl font-bold text-primary hover:opacity-80 transition-opacity">
-          <BookOpen className="w-6 h-6" />
-          <span>Editorial</span>
+          <Waves className="w-6 h-6" />
+          <span>SwimStretch</span>
         </Link>
         
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
